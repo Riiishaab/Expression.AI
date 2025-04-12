@@ -35,3 +35,15 @@
                                                                           🎯 Dense(7, activation='softmax')
                                                                                            ⬇️
                                                                               📤 Output: 7-class prediction
+
+
+
+
+
+
+
+
+# 📥 Input Layer
+Shape: (224, 224, 1)
+
+This layer accepts grayscale images resized to 224x224 pixels. It forms the entry point to the network.
