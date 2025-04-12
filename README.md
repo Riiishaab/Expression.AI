@@ -20,9 +20,6 @@ ExpressionAI is a lightweight, fast, and fun Android application that classifies
 
 ---
 
-## 📲 APK Download
-
-[👉 ExpressionAI.apk] ([https://github.com/your-username/your-repo/releases/download/v1.0/ExpressionAI.apk](https://github.com/Riiishaab/Expression.AI/releases/download/v1.0/ExpressionAI.apk))
 
 ---
 
@@ -41,6 +38,11 @@ ExpressionAI is a lightweight, fast, and fun Android application that classifies
 > This app is meant for **educational and fun purposes only**. It is **not a psychology diagnostic tool** and should not be used for self-diagnosis or treatment.
 
 ---
+
+## 📲 APK Download
+
+[👉 ExpressionAI.apk] (https://github.com/Riiishaab/Expression.AI/releases/download/v1.0/ExpressionAI.apk)
+
 
 ## ❤️ Thank You
 
