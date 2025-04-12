@@ -1,1 +1,37 @@
-<pre align="center"> 🎯 **Input Image (224x224x1)** │ ▼ 🧱 **7x7 Conv2D** + **BN** + **ReLU** (64 filters, stride 2) │ ▼ 🌊 **MaxPooling2D** (3x3, stride 2) │ ▼ 🔁 **Residual Block** (64 filters, downsample) │ ▼ 🧩 **Inception Block** (64) │ ▼ 🔁 **Residual Block** (128 filters, downsample) │ ▼ 🧩 **Inception Block** (128) │ ▼ 🔁 **Residual Block** (128 filters, downsample) │ ▼ 🧩 **Inception Block** (128) │ ▼ 🔁 **Residual Block** (256 filters, downsample) │ ▼ 🧩 **Inception Block** (256) │ ▼ 🔁 **Residual Block** (256 filters, downsample) │ ▼ 🧩 **Inception Block** (256) │ ▼ 📉 **Global Average Pooling** │ ▼ 💡 **Dense (512)** + ReLU + BN + Dropout(0.5) │ ▼ 💡 **Dense (256)** + ReLU + BN + Dropout(0.5) │ ▼ 🎯 **Dense (7)** + **Softmax** → *Final Output: Emotion Class* </pre>
+                                                                        🚀 **Deep Hybrid CNN Architecture** 🚀
+                             ⬇️
+📥 Input Layer (224x224x1)
+                             ⬇️
+🧠 Conv2D(64, 7x7, stride=2) + BatchNorm + ReLU
+                             ⬇️
+🌀 MaxPooling2D(3x3, stride=2, padding='same')
+                             ⬇️
+🔁 🔷 Residual Block (filters=64, downsample=True)
+                             ⬇️
+🔗 Inception Block (64, 32→64, 16→32, pool=32)
+                             ⬇️
+🔁 🔷 Residual Block (filters=128, downsample=True)
+                             ⬇️
+🔗 Inception Block (128, 64→128, 32→64, pool=64)
+                             ⬇️
+🔁 🔷 Residual Block (filters=128, downsample=True)
+                             ⬇️
+🔗 Inception Block (128, 64→128, 32→64, pool=64)
+                             ⬇️
+🔁 🔷 Residual Block (filters=256, downsample=True)
+                             ⬇️
+🔗 Inception Block (256, 128→256, 64→128, pool=128)
+                             ⬇️
+🔁 🔷 Residual Block (filters=256, downsample=True)
+                             ⬇️
+       🔗 Inception Block (256, 128→256, 64→128, pool=128)
+                             ⬇️
+              🔽 Global Average Pooling 2D
+                             ⬇️
+              🧱 Dense(512) → BatchNorm → Dropout(0.5)
+                             ⬇️
+              🧱 Dense(256) → BatchNorm → Dropout(0.5)
+                             ⬇️
+               🎯 Dense(7, activation='softmax')
+                             ⬇️
+                📤 Output: 7-class prediction
