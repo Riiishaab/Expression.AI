@@ -1,6 +1,5 @@
-# 🤖 Expression.AI - Facial Emotion Recognition Android App
 
-**🔗 [Download APK](https://your-apk-link-here.com)**
+**🔗 [Download APK](https://github.com/Riiishaab/Expression.AI/releases/download/v1.0/ExpressionAI.apk)**
 
 ---
 
