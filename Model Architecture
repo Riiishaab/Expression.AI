@@ -1,0 +1,49 @@
+Input Image (224x224x1)
+        │
+        ▼
+7x7 Conv2D + BN + ReLU (64 filters, stride 2)
+        │
+        ▼
+MaxPooling2D (3x3, stride 2)
+        │
+        ▼
+[ Residual Block (64 filters, downsample) ]
+        │
+        ▼
+[ Inception Block (64) ]
+        │
+        ▼
+[ Residual Block (128 filters, downsample) ]
+        │
+        ▼
+[ Inception Block (128) ]
+        │
+        ▼
+[ Residual Block (128 filters, downsample) ]
+        │
+        ▼
+[ Inception Block (128) ]
+        │
+        ▼
+[ Residual Block (256 filters, downsample) ]
+        │
+        ▼
+[ Inception Block (256) ]
+        │
+        ▼
+[ Residual Block (256 filters, downsample) ]
+        │
+        ▼
+[ Inception Block (256) ]
+        │
+        ▼
+GlobalAveragePooling2D
+        │
+        ▼
+Dense(512) + ReLU + BN + Dropout(0.5)
+        │
+        ▼
+Dense(256) + ReLU + BN + Dropout(0.5)
+        │
+        ▼
+Dense(7) with Softmax  ← 🎯 Final classification
