@@ -4,7 +4,7 @@
 
 ---
 
-## 🧱 Deep Hybrid CNN Architecture (Overview)
+## 🧱 ResEfficientCNN Architecture (Overview)
 
 ```
 🚀 Deep Hybrid CNN Architecture
