@@ -1,6 +1,7 @@
 # 🤖 ExpressionAI - Skin Disease Classifier App
 
-[📥 Download APK]
+# [📥 Download APK]
+
 (https://github.com/Riiishaab/Expression.AI/releases/download/v1.0/ExpressionAI.apk)
 
 ---
