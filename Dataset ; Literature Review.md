@@ -1,59 +1,65 @@
-
 📘 FER2013 Dataset Overview
+The Facial Expression Recognition 2013 (FER2013) dataset is a widely used benchmark for training and evaluating facial emotion classification models.
 
-The Facial Expression Recognition 2013 (FER2013) dataset is a widely used benchmark in the field of facial expression recognition. Key characteristics include:
- -> Image Details: Consists of 48×48 pixel grayscale images of human faces.​
- -> Dataset Size: Contains a total of 35,887 images, divided into:​
- -> Training set: 28,709 images​
- -> Test set: 3,589 images​
+📂 Key Characteristics:
 
-Emotion Categories: Each image is labeled with one of seven emotions:​
+Image Details: 48×48 pixel grayscale images of human faces
 
--> Angry​
--> Disgust​
--> Fear​
--> Happy​
--> Sad​
--> Surprise​
--> Papers with Code
--> Neutral​
+Total Images: 35,887
 
+Training Set: 28,709 images
 
-Challenges:
+Test Set: 3,589 images
 
--> Class Imbalance: Some emotions, like 'Disgust', have significantly fewer samples compared to others, leading to class imbalance issues.​
--> Variability: Images exhibit variations in lighting, occlusions, and facial orientations, making recognition tasks more challenging.​
--> Label Noise: There are instances of mislabeling within the dataset, which can affect model training and evaluation.​
+🧠 Emotion Categories:
 
+😠 Angry
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🤢 Disgust
+
+😨 Fear
+
+😄 Happy
+
+😢 Sad
+
+😲 Surprise
+
+😐 Neutral
+
+⚠️ Challenges:
+
+Class Imbalance: Some emotions like Disgust have significantly fewer examples
+
+Variability: Faces differ in lighting, orientation, and occlusions
+
+Label Noise: Occasional mislabeling in training/testing samples
 
 📊 Literature Review: Model Accuracies on FER2013
+Several advanced models have been developed to push the boundaries of facial expression recognition on FER2013. Below are some notable results:
 
-Over the years, numerous models have been developed and tested on the FER2013 dataset. Below are five notable models along with their reported accuracies:​
+🧪 Model	⚙️ Description	🎯 Accuracy
+VGGNet-Based	Fine-tuned VGGNet with hyperparameter tuning and LR scheduling	73.28%
+Khanzada et al. (Ensemble of 7)	Combined predictions of 7 deep models	75.80%
+EmoXNet Ensemble	Multi-architecture ensemble method	85.07%
+📱 Expression.AI Model Performance
+Our hybrid deep learning architecture was designed with mobile deployment in mind — achieving a strong balance of accuracy, efficiency, and real-time performance.
 
-1 -> VGGNet-Based Model:
-           Accuracy: 73.28%​
-           Details: Achieved by fine-tuning a VGGNet architecture with optimized hyperparameters and learning rate schedulers.​
+📌 Highlights:
 
-2 -> Ensemble of 7 Models by Khanzada et al.
-           Accuracy: 75.8%​
-           Details: Combined predictions from seven different models to enhance overall accuracy.​
+✅ Final Accuracy: 69.32% after ~130 epochs of training
 
-3 -> EmoXNet Ensemble Model:
-           Accuracy: 85.07%​
-           Details: An ensemble learning technique that integrates multiple architectural representations for robust facial expression recognition.​
+⚖️ Size vs. Performance: Optimized for deployment on Android devices
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+📦 APK Size: Entire app including model, assets & OpenCV is only 595 MB
 
-📊 Expression.AI Model Performance Overview
+🚀 Deployment: Runs real-time inference with smooth UI & fast predictions
 
-✅ After training for approximately 130 epochs, our custom hybrid model achieved a test accuracy of 69.32%.
-⚖️ This accuracy reflects a well-balanced trade-off between model size and performance, making it ideal for mobile deployment.
-📦 The entire mobile application, including the deep learning model, OpenCV libraries, and UI assets, is only 595 MB, which is significantly lightweight for modern smartphones.
-🚀 Despite the compact size, the model delivers reliable real-time predictions on device, showcasing the effectiveness of the architecture.
+🔬 Future Work
+We aim to further enhance accuracy and reduce model complexity in upcoming versions:
 
-🔬 Future work will focus on experimenting with:
-      -> More efficient architectures like blocks of MobileNetV3, EfficientNet-Lite, or quantized models.
-      -> Knowledge distillation or pruning techniques to reduce model size further while improving generalization.
-      -> Integration of transfer learning for better initialization and faster convergence.
+🔧 Explore lightweight architectures like MobileNetV3, EfficientNet-Lite
+
+🧠 Apply Knowledge Distillation and Pruning to compress the model
+
+♻️ Integrate transfer learning for better convergence and generalization
