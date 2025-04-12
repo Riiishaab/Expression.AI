@@ -43,7 +43,81 @@
 
 
 
-# 📥 Input Layer
+📥 Input Layer
 Shape: (224, 224, 1)
 
 This layer accepts grayscale images resized to 224x224 pixels. It forms the entry point to the network.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Initial Convolution + BatchNorm + ReLU
+Conv2D(64, 7x7, stride=2): Applies 64 filters of size 7x7 to extract broad spatial features.
+
+BatchNormalization: Normalizes the output to stabilize training.
+
+ReLU Activation: Introduces non-linearity to capture complex patterns.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MaxPooling
+
+MaxPooling2D(3x3, stride=2): Reduces spatial dimensions, retaining key features and improving efficiency.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔁 Residual Block
+
+Each residual block consists of:
+-> Two 3x3 Conv2D layers with ReLU and BatchNorm.
+-> A shortcut connection (identity or 1x1 projection if dimensions mismatch).
+-> Downsample option using stride=2 in the first conv layer for reducing spatial resolution.
+
+✅ Benefit: Helps in training deeper models by mitigating the vanishing gradient problem.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🔗 Inception Block
+Each inception block has 4 parallel paths:
+
+1x1 Conv: Captures localized features and reduces dimensionality.
+-> 1x1 → 3x3 Conv: Medium-range feature extraction.
+-> 1x1 → 5x5 Conv: Captures wider contextual information.
+-> 3x3 MaxPool → 1x1 Conv: Preserves spatial features with compression.
+
+✅ Benefit: Multi-scale feature extraction — sees the same data at multiple levels of detail.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+📉 Global Average Pooling
+-> Reduces the feature map to a single value per channel by averaging.
+-> Significantly reduces the number of parameters compared to Flatten.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🧱 Fully Connected Dense Layers
+-> Dense(512) → BatchNorm → Dropout(0.5)
+       -> Learns complex patterns, with normalization for stability and dropout for regularization.
+
+-> Dense(256) → BatchNorm → Dropout(0.5)
+      -> Further refines learned patterns and reduces overfitting.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+🎯 Output Layer
+-> Dense(7, softmax): Outputs probability scores for each of the 7 classes (e.g., emotions or disease categories).
+-> Softmax ensures all output scores sum to 1, ideal for multi-class classification.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
