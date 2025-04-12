@@ -1,65 +1,86 @@
-📘 FER2013 Dataset Overview
-The Facial Expression Recognition 2013 (FER2013) dataset is a widely used benchmark for training and evaluating facial emotion classification models.
+# 🤖 Expression.AI - Facial Emotion Recognition Android App
 
-📂 Key Characteristics:
+**🔗 [Download APK](https://your-apk-link-here.com)**
 
-Image Details: 48×48 pixel grayscale images of human faces
+---
 
-Total Images: 35,887
+## 📘 FER2013 Dataset Overview
 
-Training Set: 28,709 images
+The **Facial Expression Recognition 2013 (FER2013)** dataset is a widely used benchmark in facial expression recognition.
 
-Test Set: 3,589 images
+### 🔍 Dataset Highlights:
+- 📐 **Image Size**: 48×48 pixel grayscale facial images  
+- 🗃️ **Total Samples**: 35,887 images  
+  - **Training Set**: 28,709 images  
+  - **Test Set**: 3,589 images  
+- 😄 **Emotion Labels** (7 classes):
+  - Angry  
+  - Disgust  
+  - Fear  
+  - Happy  
+  - Sad  
+  - Surprise  
+  - Neutral  
 
-🧠 Emotion Categories:
+### ⚠️ Challenges:
+- ⚖️ **Class Imbalance**: Some emotions (e.g., *Disgust*) have very few samples  
+- 🌩️ **Variability**: Faces differ in lighting, occlusions, and pose  
+- 🏷️ **Label Noise**: Occasional mislabeling affects training quality  
 
-😠 Angry
+---
 
-🤢 Disgust
+## 📊 Literature Review: Model Accuracies on FER2013
 
-😨 Fear
+Here are some top models and their performance on the FER2013 dataset:
 
-😄 Happy
+1. **VGGNet-Based Model**  
+   - 📈 Accuracy: **73.28%**  
+   - 🛠️ Details: Fine-tuned VGG architecture with optimized learning strategies  
 
-😢 Sad
+2. **Khanzada et al. (Ensemble of 7 Models)**  
+   - 📈 Accuracy: **75.8%**  
+   - 🤖 Details: Combined predictions from 7 individual networks  
 
-😲 Surprise
+3. **EmoXNet Ensemble**  
+   - 📈 Accuracy: **85.07%**  
+   - 🔬 Details: Multiple architectural branches merged for final prediction  
 
-😐 Neutral
+---
 
-⚠️ Challenges:
+## 📊 Expression.AI Model Performance Overview
 
-Class Imbalance: Some emotions like Disgust have significantly fewer examples
+- ✅ After training for around **130 epochs**, our **custom hybrid model** reached a **test accuracy of 69.32%**
+- ⚖️ This accuracy reflects a balanced trade-off between **model size** and **performance**
+- 📦 The **entire mobile app package** (including model, OpenCV, and UI) is **just 595 MB**
+- 🚀 Runs **smoothly in real-time** on Android, showing efficient architecture deployment
 
-Variability: Faces differ in lighting, orientation, and occlusions
+---
 
-Label Noise: Occasional mislabeling in training/testing samples
+## ⚙️ Tech Stack
 
-📊 Literature Review: Model Accuracies on FER2013
-Several advanced models have been developed to push the boundaries of facial expression recognition on FER2013. Below are some notable results:
+- 🧠 **Model Type**: Hybrid Residual + Inception CNN  
+- 📊 **Framework**: TensorFlow/Keras  
+- 📱 **Deployment**: Android Studio (Jetpack Compose + PyTorch Lite)  
+- 🎨 **Libraries**: OpenCV, CameraX
 
-🧪 Model	⚙️ Description	🎯 Accuracy
-VGGNet-Based	Fine-tuned VGGNet with hyperparameter tuning and LR scheduling	73.28%
-Khanzada et al. (Ensemble of 7)	Combined predictions of 7 deep models	75.80%
-EmoXNet Ensemble	Multi-architecture ensemble method	85.07%
-📱 Expression.AI Model Performance
-Our hybrid deep learning architecture was designed with mobile deployment in mind — achieving a strong balance of accuracy, efficiency, and real-time performance.
+---
 
-📌 Highlights:
+## 🔬 Future Work
 
-✅ Final Accuracy: 69.32% after ~130 epochs of training
+We plan to improve the model further through:
+- 📱 Lightweight backbones like **MobileNetV3**, **EfficientNet-Lite**, or **quantized CNNs**
+- 🧠 **Knowledge distillation** or **pruning** to reduce size and inference latency  
+- 🧬 **Transfer learning** to enable faster convergence and better initialization  
 
-⚖️ Size vs. Performance: Optimized for deployment on Android devices
+---
 
-📦 APK Size: Entire app including model, assets & OpenCV is only 595 MB
+## 🎉 Why Expression.AI?
 
-🚀 Deployment: Runs real-time inference with smooth UI & fast predictions
+- 🤳 **Fun**: Use it with friends, family, and colleagues
+- ⚡ **Fast**: Real-time inference on-device
+- 🧠 **Smart**: Deep learning on mobile
 
-🔬 Future Work
-We aim to further enhance accuracy and reduce model complexity in upcoming versions:
+---
 
-🔧 Explore lightweight architectures like MobileNetV3, EfficientNet-Lite
+> We hope you enjoy using **Expression.AI** as much as we enjoyed building it!
 
-🧠 Apply Knowledge Distillation and Pruning to compress the model
-
-♻️ Integrate transfer learning for better convergence and generalization
